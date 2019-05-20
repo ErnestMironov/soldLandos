@@ -1,0 +1,35 @@
+@import 'variables';
+@import 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Circe';
+    color: #000;
+}
+
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 90%;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (min-width: 1250px) {
+        max-width: 1180px;
+    }
+}
+
+@import 'header';
+@import 'content';
+@import 'footer';

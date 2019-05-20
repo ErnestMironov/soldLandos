@@ -1,0 +1,22 @@
+{
+  "name": "novostroiki",
+  "version": "1.0.0",
+  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "main": "index.js",
+  "scripts": {
+    "watch": "parcel watch scss/mainStyle.scss --public-url ./",
+    "build": "parcel build scss/mainStyle.scss --public-url ./"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel-bundler": "^1.12.3",
+    "sass": "^1.17.3"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.0",
+    "cssnano": "^4.1.10",
+    "postcss": "^7.0.14",
+    "postcss-modules": "^1.4.1"
+  }
+}
