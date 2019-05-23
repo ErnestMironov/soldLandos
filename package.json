@@ -1,22 +1,49 @@
 {
-  "name": "novostroiki",
-  "version": "1.0.0",
-  "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
+  "name": "parcel-starter-kit",
+  "author": "Carlos Barbosa @socarlosb",
+  "version": "1.0.1",
   "main": "index.js",
+  "license": "MIT",
+  "keywords": [
+    "parceljs",
+    "es6",
+    "eslint",
+    "jest",
+    "babel"
+  ],
   "scripts": {
-    "watch": "parcel watch scss/mainStyle.scss --public-url ./",
-    "build": "parcel build scss/mainStyle.scss --public-url ./"
+    "clean-dist": "rimraf dist",
+    "clean-coverage": "rimraf scr/tests-reports",
+    "start": "parcel src/index.html",
+    "lint": "eslint src/scripts/*",
+    "build": "parcel build src/index.html --public-url ./ --out-dir dist",
+    "dist": "npm run clean-dist && npm run build",
+    "test": "jest --watchAll",
+    "test-report": "npm run clean-coverage && jest --coverage"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.17.3"
+    "autoprefixer": "^7.2.4",
+    "babel-preset-env": "^1.6.1",
+    "node-sass": "^4.12.0",
+    "postcss-modules": "^1.1.0",
+    "posthtml-img-autosize": "^0.1.1",
+    "rimraf": "^2.6.2",
+    "typescript": "^2.7.1"
   },
   "devDependencies": {
-    "autoprefixer": "^9.5.0",
-    "cssnano": "^4.1.10",
-    "postcss": "^7.0.14",
-    "postcss-modules": "^1.4.1"
+    "babel-core": "^6.26.3",
+    "babel-jest": "^24.8.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.17.2",
+    "jest": "^24.8.0",
+    "parcel-bundler": "^1.12.3"
+  },
+  "jest": {
+    "coverageDirectory": "src/tests-reports",
+    "coverageReporters": [
+      "html",
+      "text"
+    ]
   }
 }

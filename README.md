@@ -1,37 +1,40 @@
-## Welcome to GitHub Pages
+# Webapp Starter Kit
 
-You can use the [editor on GitHub](https://github.com/ErnestMironov/soldLandos/edit/gh-pages/README.md) to maintain and preview the content for your website in Markdown files.
+_Using parceljs, es6, eslint, jest_
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[TOC]
 
-### Markdown
+## Requisits
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+- Install [nodejs](https://nodejs.org/en/)
+- Git [git](https://git-scm.com/)
 
-```markdown
-Syntax highlighted code block
+## Preparation
 
-# Header 1
-## Header 2
-### Header 3
+- clone this repo by running `git clone https://github.com/socarlosb/parcel-starter-kit.git 'your-project'` in your command line
+- open the folder `cd 'your-project'`
+- then run `npm install`
 
-- Bulleted
-- List
+## Commands
 
-1. Numbered
-2. List
+- `npm start` - start your dev environment
+- `npm run dist` - clean the _dist_ folder and build your app in the _dist/output_ folder
+- `npm run lint` - check for errors in your javascript code
+- `npm run test` - start your javascript tests (put all tests in _src/tests_ folder with extension `.test.js`, eslint will ignore this folder)
+- `npm run test-report` - will display and create a test report in a clean _src/tests-reports_
 
-**Bold** and _Italic_ and `Code` text
+## You can use
 
-[Link](url) and ![Image](src)
-```
+- [Babel](https://babeljs.io/) - compiles javascript ES6 to javascript that even _IE_ can understand
+- [PostCSS](http://postcss.org/) - transform styles in javascript
+- [PostHTML](https://github.com/posthtml/posthtml) - transform html/xml with javascript plugins
+- [TypeScript](https://www.typescriptlang.org/)
+- [Jest](https://facebook.github.io/jest/) - javascript tests
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+## Changes to make if you need:
 
-### Jekyll Themes
+- [React or Preact](https://en.parceljs.org/recipes.html)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ErnestMironov/soldLandos/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+## More info:
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+- [Jest docs](https://facebook.github.io/jest/docs/en/getting-started.html)

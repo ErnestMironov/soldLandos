@@ -1,0 +1,198 @@
+.content {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__left {
+        max-width: 428px;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__title {
+        font-weight: normal;
+        font-size: 39px;
+        line-height: 57px;
+        text-transform: uppercase;
+    }
+
+    &__text {
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 27px;
+        margin-top: 10px;
+    }
+
+    &__right {
+        max-width: 50%;
+        width: 50%;
+        height: 50vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__pie {
+        position: absolute;
+        height: 900px;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 100vh;  
+
+        &.active {
+            .content {
+                &__pie-piece {
+                    visibility: hidden;
+                    opacity: 0;
+                    
+                    path, rect {
+                        animation: none;
+                    }
+                    
+                    &:hover {        
+                        path, rect {
+                            animation: none;
+                        }
+                    }
+
+                    &.active {
+                        opacity: 1;
+                        visibility: visible;
+
+                        &:hover {
+                            path:first-of-type {
+                                fill: #da1111;
+                            }
+                        }
+            
+                        path:first-of-type {
+                            fill: #2e2e2e;
+                        }
+                    }
+                }
+                &__avito {
+                    transform: translate(-100px, -100px);
+                    
+                    &.active {
+                        transform:  scale(0.5) translate(-29%, 15%);
+                    }
+                }
+
+                &__yandex {
+                    transform: translate(100px, -25px);
+
+                    &.active {
+                        transform: scale(0.5) translate(-56%, 18%);
+                    }
+                }
+
+                &__yula {
+                    transform: translate(0, -100px);
+
+                    &.active {
+                        transform: scale(0.5) translate(-31%, 22%); 
+                    }
+                }
+
+                &__cian {
+                    transform: translate(15px, 95px);
+
+                    &.active {
+                        transform: scale(0.5) translate(-48%, 0%); 
+                    } 
+                    
+                }
+                &__domofond {
+                    transform: translate(-100px, 36px);
+ 
+                    &.active {
+                        transform: scale(0.5) translate(-31%, 6%);
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    &__pie-piece path:first-of-type{
+        fill: transparent; 
+        transition: fill ease-out 0.2s;
+    }
+
+    &__avito, &__domofond {
+        path:first-of-type {
+            stroke: transparent;
+        }
+    }
+
+    &__pie-piece {
+        transition: all ease-in-out .5s;
+        cursor: pointer;
+
+        &:nth-child(1) {
+            path, rect {
+                animation: tremmorTopLeft 0.5s ease-in-out 0.7s infinite;
+            }   
+            
+            &:hover {        
+                path, rect {
+                    animation: tremmorTopLeft 0.15s ease-in-out 0.5s infinite;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            path, rect {
+                animation: tremmorTop 0.5s ease-in-out 0.75s infinite;
+            }   
+            
+            &:hover {        
+                path, rect {
+                    animation: tremmorTop 0.15s ease-in-out 0.5s infinite;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            path, rect {
+                animation: tremmorRight 0.5s ease-in-out 0.5s infinite;
+            }
+
+            &:hover {        
+                path, rect {
+                    animation: tremmorRight 0.15s ease-in-out 0.5s infinite;
+                }
+            }
+            
+        }
+
+        &:nth-child(4) {
+            path, rect {
+                animation: tremmorBottom 0.5s ease-in-out 0.65s infinite;
+            }   
+            
+            &:hover {        
+                path, rect {
+                    animation: tremmorBottom 0.15s ease-in-out 0.5s infinite;
+                }
+            }
+        }
+        
+        &:nth-child(5) {
+            path, rect {
+                animation: tremmorBottomLeft 0.5s ease-in-out 0.85s infinite;
+            }   
+            
+            &:hover {        
+                path, rect {
+                    animation: tremmorBottomLeft 0.15s ease-in-out 0.5s infinite;
+                }
+            }
+        }
+    }
+}
