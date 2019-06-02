@@ -1,0 +1,120 @@
+.header {
+    width: 100%;
+    padding-top: 30px;
+
+    @include mobile_and_tablet {
+        z-index: 4;
+        padding-top: 25px;
+    }
+
+    @include mobile {
+        padding-top: 15px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 3;
+    }
+
+    &__logo {
+        height: 90px;
+        padding-left: 3px;
+
+        @include mobile {
+            height: 50px;
+        }
+
+        img {
+            max-height: 100%;
+        }
+    }
+
+    &__menu {
+        @include mobile_and_tablet {
+            position: fixed;
+            max-height: 100vh;
+            width: 100vw;
+            top: 0;
+            left: 0;
+            padding: 40px 15px 20px;
+            background-color: #fff;
+            transform: translateY(-110%);
+            z-index: -1;
+            transition: all ease-out 0.2s;
+            box-shadow: 0 0 15px #c5c5c5eb;
+        }
+
+        &.active {
+            z-index: 4;
+            transform: translateY(0);
+
+            .header__menu-list {
+                transform: translateX(0);
+                transition-delay: 0.3s;
+            }
+        }
+    }
+
+    &__menu-btn {
+        position: relative;
+        z-index: 5;
+    }
+
+    &__menu-list {
+        display: flex;
+        list-style: none;
+
+        @include mobile_and_tablet {
+            display: block;
+            transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.22s;
+            transform: translateX(-100%);
+        }
+    }
+
+    &__menu-list-item {
+        margin-right: 20px;
+        padding: 5px 10px 0 0;
+        border-radius: 0 4px 0 0;
+        line-height: 15px;
+        font-size: 16px;
+        transition: all ease-out .18s;
+
+        @include mobile_and_tablet {
+            display: block;
+            padding: 0;
+            font-size: 20px;
+            margin-bottom: 28px;
+
+        }
+
+        &_active,
+        &:hover {
+            color: darken($main-color, 5%);
+        }
+
+        &_active {
+            border-right: 1px solid darken($main-color, 5%);
+            border-top: 1px solid darken($main-color, 5%);
+
+            @include mobile {
+                border: 0;
+
+                a {
+                    border-bottom: 1px solid darken($main-color, 5%);
+                }
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+
+    &__menu-link {
+        text-decoration: none;
+        color: inherit;
+    }
+}

@@ -1,0 +1,15 @@
+- var services = [{'class': 'avito', 'name': 'авито'}, {'class': 'cian', 'name': 'циан'},{'class': 'yandex', 'name': 'яндекс'},{'class': 'domofond', 'name': 'домофонд'},{'class': 'yula', 'name': 'юла'}]
+each val, index in services 
+  div(class="reality-top reality-top_" + services[index]['class'])
+    .reality-top__caption-wrap
+      img.reality-top__back(src="img/back.svg")
+      .reality-top__caption= 'ГОРЯЩИЕ ПРЕДЛОЖЕНИЯ ВЗЯТЫЕ C СЕРВИСА ' + services[index]['name'] + ' НА'
+        span.reality-top__date  28.05.19  
+    .reality-top__list
+      - for (var x = 0; x < 15; x++)
+        .reality-top__item
+          .reality-top__img-wrap
+            img.reality-top__img(src='img/appartament.png' alt='')
+          .reality-top__title 1к. кв. ЖК Охта;
+          .reality-top__price 4 500 000 руб.
+          .reality-top__size 38м2    
