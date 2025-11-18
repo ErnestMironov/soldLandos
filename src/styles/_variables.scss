@@ -3,6 +3,40 @@ $main-color: #fed514;
 $tablet-width: 768px;
 $desktop-width: 990px;
 
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --text-secondary: #484848;
+  --text-light: #676767;
+  --border-color: #e2e0e0;
+  --border-secondary: #c6c6c6;
+  --border-tertiary: #80808073;
+  --input-bg: #EFECEC;
+  --input-bg-hover: #dddbd3;
+  --card-bg: #ffffff;
+  --shadow-color: rgba(150, 150, 150, 0.2);
+  --main-color: #{$main-color};
+  --main-color-hover: #{darken($main-color, 5%)};
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #e4e4e4;
+    --text-secondary: #b8b8b8;
+    --text-light: #999999;
+    --border-color: #3a3a3a;
+    --border-secondary: #4a4a4a;
+    --border-tertiary: #5a5a5a;
+    --input-bg: #2a2a2a;
+    --input-bg-hover: #333333;
+    --card-bg: #242424;
+    --shadow-color: rgba(0, 0, 0, 0.4);
+    --main-color: #{$main-color};
+    --main-color-hover: #{darken($main-color, 5%)};
+  }
+}
+
 @mixin mobile {
   @media (max-width: #{$tablet-width - 1px}) {
     @content;
