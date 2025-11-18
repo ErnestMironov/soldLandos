@@ -66,12 +66,12 @@
 
                         &:hover {
                             path:first-of-type {
-                                fill: #da1111;
+                                fill: var(--main-color-hover);
                             }
                         }
             
                         path:first-of-type {
-                            fill: #2e2e2e;
+                            fill: var(--card-bg);
                         }
                     }
                 }

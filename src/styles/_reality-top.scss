@@ -1,7 +1,6 @@
 .reality-top {
-    background-color: #fff;
+    background-color: var(--card-bg);
     border-radius: 5px;
-    // border: .5px solid #d3d3d3;
     padding: 15px;
     position: absolute;
     left: 50%;
@@ -25,8 +24,9 @@
         justify-content: space-between;
         align-items: center;
         padding: 14px 0;
-        border-bottom: .5px solid #e2e0e0;
+        border-bottom: .5px solid var(--border-color);
         position: relative;
+        color: var(--text-color);
 
         &:after {
             content: '';
@@ -38,7 +38,7 @@
             transform: scaleX(0);
             transition-duration: 0.25s;
             transition-timing-function: ease-out;
-            background: $main-color;
+            background: var(--main-color);
             width: 100%;
             height: 4px; 
         }

@@ -29,15 +29,16 @@
         border-radius: 0 4px 0 0;
         line-height: 15px;
         font-size: 16px;
+        color: var(--text-color);
 
         &_active,
         &:hover {
-            color: darken($main-color, 5%);
+            color: var(--main-color-hover);
         }
 
         &_active {
-            border-right: 1px solid #80808073;
-            border-top: 1px solid #c6c6c6;
+            border-right: 1px solid var(--border-tertiary);
+            border-top: 1px solid var(--border-secondary);
         }
 
         &:last-child {
