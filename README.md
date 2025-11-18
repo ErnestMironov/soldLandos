@@ -23,6 +23,10 @@ _Using parceljs, es6, eslint, jest_
 - `npm run test` - start your javascript tests (put all tests in _src/tests_ folder with extension `.test.js`, eslint will ignore this folder)
 - `npm run test-report` - will display and create a test report in a clean _src/tests-reports_
 
+## Deployment
+
+GitHub Pages deployment is automated through `.github/workflows/deploy.yml`. Push or merge to the `main` branch (or trigger the workflow manually) and the action will install dependencies with Yarn, run `yarn build`, and publish the `dist` folder using the official Pages deploy action. Ensure the repository’s **Settings → Pages** is set to “GitHub Actions” so the published site becomes available once the workflow finishes.
+
 ## You can use
 
 - [Babel](https://babeljs.io/) - compiles javascript ES6 to javascript that even _IE_ can understand
