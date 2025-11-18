@@ -18,6 +18,12 @@
         }
     }
 
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
     &__menu-list {
         display: flex;
         list-style: none;
@@ -49,5 +55,58 @@
     &__menu-link {
         text-decoration: none;
         color: inherit;
+    }
+}
+
+.theme-switcher {
+    position: relative;
+    width: 60px;
+    height: 30px;
+    background: var(--border-color);
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    padding: 0;
+    outline: none;
+
+    &:hover {
+        background: var(--border-secondary);
+    }
+
+    &:focus-visible {
+        outline: 2px solid var(--main-color);
+        outline-offset: 2px;
+    }
+
+    &__toggle {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 24px;
+        height: 24px;
+        background: var(--card-bg);
+        border-radius: 50%;
+        transition: transform 0.3s ease, background 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 4px var(--shadow-color);
+
+        &::before {
+            content: '☀️';
+            font-size: 14px;
+            position: absolute;
+        }
+    }
+
+    [data-theme="dark"] & {
+        &__toggle {
+            transform: translateX(30px);
+
+            &::before {
+                content: '🌙';
+            }
+        }
     }
 }
