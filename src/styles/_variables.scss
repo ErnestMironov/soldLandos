@@ -20,7 +20,7 @@ $desktop-width: 990px;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
+  :root:not([data-theme="light"]) {
     --bg-color: #1a1a1a;
     --text-color: #e4e4e4;
     --text-secondary: #b8b8b8;
@@ -35,6 +35,22 @@ $desktop-width: 990px;
     --main-color: #{$main-color};
     --main-color-hover: #{darken($main-color, 5%)};
   }
+}
+
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e4e4e4;
+  --text-secondary: #b8b8b8;
+  --text-light: #999999;
+  --border-color: #3a3a3a;
+  --border-secondary: #4a4a4a;
+  --border-tertiary: #5a5a5a;
+  --input-bg: #2a2a2a;
+  --input-bg-hover: #333333;
+  --card-bg: #242424;
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  --main-color: #{$main-color};
+  --main-color-hover: #{darken($main-color, 5%)};
 }
 
 @mixin mobile {
